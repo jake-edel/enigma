@@ -6,8 +6,6 @@ class Encryptor
   end
 
   def self.find_consecutive_values(string)
-    consecutive_values = []
-    string.chars.each_cons(2) { |cons| consecutive_values << cons.join('') }
-    consecutive_values
+    string.chars.each_cons(2).map { |cons| cons.join('').to_i }
   end
 end
