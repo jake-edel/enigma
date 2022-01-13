@@ -1,9 +1,9 @@
 class Enigma
-  def self.encrypt(encryption_hash)
+  def self.encrypt(message, key, date)
     encryption_hash
   end
 
-  def self.decrypt(encryption_hash)
+  def self.decrypt(ciphertext, key, date)
     encryption_hash
   end
 end
