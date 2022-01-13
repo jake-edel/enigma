@@ -10,7 +10,7 @@ RSpec.describe Encryptor do
 
     it 'takes a string as arg and returns an array of consecutive numbers stored in arrays' do
       consecutive_values = Encryptor.find_consecutive_values(@key)
-      expect(consecutive_values).to eq [ ['1', '2'], ['2', '3'], ['3', '4'], ['4', '5'] ]
+      expect(consecutive_values).to eq [ '12', '23', '34', '45' ]
     end
   end
  end
