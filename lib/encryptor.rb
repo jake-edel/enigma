@@ -10,6 +10,10 @@ class Encryptor
   end
 
   def self.offsets_from_date(string)
-    (string.to_i ** 2).to_s[-4..-1].split('').map(&:to_i)
+    last_four_of_squared_value(string).map(&:to_i)
+  end
+
+  def self.last_four_of_squared_value(string)
+    (string.to_i**2).to_s[-4..-1].split('')
   end
 end
