@@ -6,6 +6,9 @@ class CharacterShifter
   end
 
     def shift_message
+      @message.each_char do |char|
+        p char
+      end
     end
 
     def shift_char(char, shift_value)
