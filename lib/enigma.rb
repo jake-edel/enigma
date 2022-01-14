@@ -5,8 +5,11 @@ require './lib/character_shifter'
 class Enigma
   def self.encrypt(message, key, date)
     shift_array = OffsetFinder.find_shifts(key, date)
-    encrypted_message = CharacterShifter.new(message, shift_array)
-    Hash.new
+      hash = {
+      encryption: CharacterShifter.new(message, shift_array).shift_message,
+      key: key,
+      date: date
+    }
   end
 
   def self.decrypt(ciphertext, key, date)
