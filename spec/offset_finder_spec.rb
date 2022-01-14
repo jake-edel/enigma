@@ -30,4 +30,12 @@ RSpec.describe OffsetFinder do
       expect(last_four).to eq %w[1 0 2 5]
     end
   end
+
+  describe '#sum_arrays' do
+    it 'adds the elements of an array with their corresponding index in another array' do
+      a1 = [1, 2, 3, 4]
+      a2 = a1.reverse
+      expect(OffsetFinder.sum_arrays(a1, a2)).to eq [5, 5, 5, 5]
+    end
+  end
 end
