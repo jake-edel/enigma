@@ -2,8 +2,8 @@ require './lib/enigma'
 
 RSpec.describe Enigma do
   before(:each) do
-    message = 'Hello World',
-    key = '02715',
+    message = 'Hello World'
+    key = '02715'
     date = '040895'
     ciphertext = 'Keder Ohulw'
 
