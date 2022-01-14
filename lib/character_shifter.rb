@@ -1,6 +1,4 @@
 class CharacterShifter
-  attr_reader :i
-
   def initialize(message, offsets)
     @message = message
     @offsets = offsets
