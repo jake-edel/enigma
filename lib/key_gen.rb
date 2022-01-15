@@ -1,12 +1,11 @@
-class KeyGen
-
- 	def self.generate_key
+module KeyGen
+  def self.generate_key
     key = ''
     5.times { key += rand(9).to_s }
     key
   end
 
   def self.generate_date
-    require 'pry-byebug'; binding.pry
+    Time.now.strftime("%d%m%y")
   end
 end
