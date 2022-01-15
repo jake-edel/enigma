@@ -1,9 +1,6 @@
-class OffsetFinder
+module OffsetFinder
   def self.find_shifts(key, date)
-    keys = find_consecutive_values(key)
-    offsets = offsets_from_date(date)
-
-    sum_arrays(keys, offsets)
+    sum_arrays(find_consecutive_values(key), offsets_from_date(date))
   end
 
   def self.find_consecutive_values(digit_string)

@@ -4,7 +4,10 @@ require './lib/key_gen'
 
 
 class Enigma
-  def self.encrypt(message, key = KeyGen.generate_key, date = KeyGen.generate_date)
+  include OffsetFinder
+  include KeyGen
+
+  def self.encrypt(message, key = generate_key, date = generate_date)
     shift_array = OffsetFinder.find_shifts(key, date)
     {
     encryption: CharacterShifter.new(message, shift_array).shift_message,
