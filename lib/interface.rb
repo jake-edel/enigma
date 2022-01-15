@@ -1,7 +1,7 @@
 require './lib/enigma'
 
 class Interface
-  def self.enigma(decrypt: false)
+  def self.enigma(decrypt = false)
     input_path = "./msgs/#{ARGV.first}"
     output_path = "./msgs/#{ARGV[1]}"
     message = read_message(input_path)

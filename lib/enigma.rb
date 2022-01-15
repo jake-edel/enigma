@@ -2,12 +2,8 @@ require './lib/offset_finder'
 require './lib/character_shifter'
 require './lib/key_gen'
 
-
 class Enigma
-  include OffsetFinder
-  include KeyGen
-
-  def self.encrypt(message, key = generate_key, date = generate_date)
+  def self.encrypt(message, key = KeyGen.generate_key, date = KeyGen.generate_date)
     shift_array = OffsetFinder.find_shifts(key, date)
     {
     encryption: CharacterShifter.new(message, shift_array).shift_message,
