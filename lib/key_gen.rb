@@ -1,5 +1,4 @@
-class KeyGen
-
+module KeyGen
   def self.generate_key
     key = ''
     5.times { key += rand(9).to_s }
