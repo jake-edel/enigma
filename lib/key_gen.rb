@@ -7,8 +7,6 @@ class KeyGen
   end
 
   def self.generate_date
-    key = ''
-    6.times { key += rand(9).to_s }
-    key
+    require 'pry-byebug'; binding.pry
   end
 end
