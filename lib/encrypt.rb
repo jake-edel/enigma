@@ -22,7 +22,7 @@ class Interface < Enigma
 
   def write_encrypted_message
     File.open(@encryption_file_path, 'wb') do |file|
-      file << @encryption_hash
+      file << @encryption_hash[:encryption]
     end
   end
 
