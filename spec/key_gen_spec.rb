@@ -12,6 +12,6 @@ require './lib/key_gen'
   end
 
   it 'can generate a 6 digit string from a date' do
-    expect(KeyGen.generate_date).to be nil
+    expect(KeyGen.generate_date).to be nil 
   end
  end
