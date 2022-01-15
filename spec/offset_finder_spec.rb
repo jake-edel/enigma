@@ -4,7 +4,6 @@ RSpec.describe OffsetFinder do
   before(:each) do
     @key = '02715'
     @date = '040895'
-    @encryptor = OffsetFinder.new
   end
 
   describe '#find_consecutive_values' do
