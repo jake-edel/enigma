@@ -1,7 +1,7 @@
 require './lib/enigma'
 
 class Interface
-  def self.enigma(decrypt = false)
+  def self.enigma(decrypt: false)
     input_path = './msgs/' + ARGV.first
     output_path = './msgs/' + ARGV[1]
     message = read_message(input_path)
@@ -22,14 +22,6 @@ class Interface
 
   def self.shift_message(message, decrypt)
     decrypt ? Enigma.decrypt(message, ARGV[2], ARGV.last) : Enigma.encrypt(message)
-  end
-
-  def self.encrypt_message(message)
-    Enigma.encrypt(message)
-  end
-
-  def self.decrypt_message(message)
-    Enigma.decrypt(message, ARGV[2], ARGV.last)
   end
 
   def self.write_message(file_path, message)
