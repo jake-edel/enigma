@@ -5,7 +5,7 @@ RSpec.describe Enigma do
     message = 'Hello World'
     key = '02715'
     date = '040895'
-    ciphertext = 'Keder Ohulw'
+    ciphertext = 'keder ohulw'
 
     @encrypted = Enigma.encrypt(message, key, date)
     @decrypted = Enigma.decrypt(ciphertext, key, date)

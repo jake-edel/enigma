@@ -5,9 +5,8 @@ class KeyGen
     5.times { key += rand(9).to_s }
     key
   end
-  # def self.generate_date
-  #   key = ''
-  #   6.times { key += rand(9).to_s }
-  #   key
-  # end
+
+  def self.generate_date
+    require 'pry-byebug'; binding.pry
+  end
 end
