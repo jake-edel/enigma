@@ -1,8 +1,7 @@
 
 # <p align="center">🕵 💬 🔐 E N I G M A 🤫 📅 🤐</p>
-### <p align="center">**A command line introduction to cryptography**</p>
 ![enigma_illustration_scaled](https://user-images.githubusercontent.com/79817178/149670136-1278284f-66e8-4e68-8608-a25d8f621d2c.jpg)
-
+### <p align="center">**A command line introduction to cryptography**</p>
 
 
 
