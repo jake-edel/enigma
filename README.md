@@ -1,4 +1,4 @@
-#  🕵 💬 🔐  E N I G M A 🤫 📅 🤐
+<p style="text-align: center;">🕵 💬 🔐  E N I G M A 🤫 📅 🤐</p>#  
 ### A command line introduction to cryptography
 ##### Jakob Edelstein
 ---
@@ -78,11 +78,15 @@ The key and date generated to encode the string will only be printed to the term
 #### Additional Resources + Context
 While not relavant to the algorithim specifically, here are some interesting facts and resources relating to the cracking of Enigma.
 
-[Alan Turing and Enigma](https://www.youtube.com/watch?v=d2NWPG2gB_A) from Computerphile on YouTube, part of a [longer series on the work of Turing](https://www.youtube.com/playlist?list=PLzH6n4zXuckodsatCTEuxaygCHizMS0_I)</br></br>
-[Enigma Machine](https://en.wikipedia.org/wiki/Enigma_machine) from Wikipedia</br></br>
-[Ultra](https://en.wikipedia.org/wiki/Ultra): Codename for WWII British cryptography division located at Bletchley Park
-
+![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)
 Enigma Machine [Source](https://www.timesofisrael.com/enigma-code-machine-reveals-hebrew-secret/)
+
+![Enigma_wiring](https://user-images.githubusercontent.com/79817178/149668364-80fc786a-7009-4dc3-b171-08fb32b11c52.png)
+[Enigma Machine](https://en.wikipedia.org/wiki/Enigma_machine) from Wikipedia</br></br>
+
+[Alan Turing and Enigma](https://www.youtube.com/watch?v=d2NWPG2gB_A) from Computerphile on YouTube, part of a [longer series on the work of Turing](https://www.youtube.com/playlist?list=PLzH6n4zXuckodsatCTEuxaygCHizMS0_I)</br></br>
+
+[Ultra](https://en.wikipedia.org/wiki/Ultra): Codename for WWII British cryptography division located at Bletchley Park
 
 **CAPTCHA** stands for “**C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part,”
 
