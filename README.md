@@ -1,4 +1,4 @@
-# <p style="text-align: center;">🕵 💬 🔐  E N I G M A 🤫 📅 🤐</p>
+## <p style="text-align: center;">🕵 💬 🔐  E N I G M A 🤫 📅 🤐</p>
 ### <p style="text-align: center;">**A command line introduction to cryptography**</p>
 ---
 
