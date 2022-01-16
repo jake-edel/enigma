@@ -1,7 +1,7 @@
 
 <p align="center">
    # 🕵 💬 🔐  E N I G M A 🤫 📅 🤐<br><br>
-![enigma_illustration](https://user-images.githubusercontent.com/79817178/149669497-c1f34cce-2a41-42f7-9a6f-29178ec51ee4.jpg)
+![enigma_illustration](https://user-images.githubusercontent.com/79817178/149669497-c1f34cce-2a41-42f7-9a6f-29178ec51ee4.jpg)</br>
   ### **A command line introduction to cryptography**
 </p>
 
