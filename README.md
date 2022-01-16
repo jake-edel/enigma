@@ -99,7 +99,7 @@ A UK based team of mathmaticians and cryptographers, including Alan Turing, have
 
 Aside from his work at Bletchley Park, which is recognized as having given the Allies a critical strategic advantage during WWII, Alan Turing's work has formed part of the foundation upon which all of Computer Science is built upon. However, cracking of Enigma was classified until 1974, and he was never able to recieve credit for his contribtion to the Allies eventual victory.
 
-Alan Turing died a tragic and premature death in 1954, at the age of 41. He was prosecuted for his sexuality, and recieved punishment so cruel, inhumane and barbaric, that it defies comprehension. A public apology was issued in 2009, and a posthumous pardon was granted by Queen Elizabeth in 2013, nearly 60 years after his death.
+Alan Turing died a tragic and premature death in 1954, at the age of 41. He was prosecuted for his sexuality, and recieved punishment so cruel, inhumane and barbaric, that it defies comprehension by modern standards. A public apology was issued in 2009, and a posthumous pardon was granted by Queen Elizabeth II in 2013, nearly 60 years after his death.
 
 Had it not been for his contributions to military and industry, Alan Turing would likely have remained unknown and anonymous. The legacy of his work helped form the foundation of computing and the modern world, but his story serves as a stark reminder of a disturbing history of human rights that must be acknowledged and reckoned with.
 
