@@ -1,5 +1,5 @@
 
-<p align="center">🕵 💬 🔐 # E N I G M A 🤫 📅 🤐</p><br><br>
+# <p align="center">🕵 💬 🔐 E N I G M A 🤫 📅 🤐</p><br><br>
 
 <p align="center">
    
