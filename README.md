@@ -1,6 +1,5 @@
-<p style="text-align: center;">🕵 💬 🔐  E N I G M A 🤫 📅 🤐</p>#  
-### A command line introduction to cryptography
-##### Jakob Edelstein
+# <p style="text-align: center;">🕵 💬 🔐  E N I G M A 🤫 📅 🤐</p>
+### <p style="text-align: center;">**A command line introduction to cryptography**</p>
 ---
 
 
@@ -45,7 +44,7 @@ Once both collections have been calculated, they are summed together, while pres
 
 And the resulting shifts collection is `[16, 31, 42, 49]`
 
-#### Encoding the string
+#### **Encoding the String**
 Using the collection of shift values, each character is encoded with a corresponding shift value. Starting with the first character and the first shift value, the character is shifted through the set of shiftable characters. The character is moved forward through the collection, the length determined by the value. Shifts the extend beyond the length of the collection, the character is wrapped around starting at `a`.
 
 The second character will be shifted by the second shift value, the third by the third value, and so on. Once four characters have been shifted, the shift sequence repeats from the beginning. Any character not shifted will not advance the procession of shifts.
@@ -57,7 +56,7 @@ Ex. The string, `aaaaa`, and shift collection `[1, 2, 3, 4]`, will interact as f
 - 5st Shift: `a` shifted by 1 is `b`
 - The encoded string will be `bcdeb`
 
-#### Decoding the string
+#### **Decoding the String**
 Decoding works on the same priciples and methods as the encoding, with one difference. Rather than advancing forward through the character set, it will reverse the letter shift. Using the encoded string and shifts from above, the string `bcdeb` will be decrypted back to `aaaaa`.
 - 1st Shift: `b` reverse shifted by 1 is `a`
 - 2st Shift: `c` reverse shifted by 2 is `a`
@@ -66,7 +65,7 @@ Decoding works on the same priciples and methods as the encoding, with one diffe
 - 5st Shift: `b` reverse shifted by 1 is `a`
 - The encoded string will be `bcdeb`
 
-#### Considerations
+#### **Considerations**
 The algorithim will not preserve character case, and thus the decrypted message will not reflect the character case of the original message.
 
 Any symbols or characters outside of the given set will not be shifted, and will have their index and value preserved in the encoded message.
@@ -75,22 +74,24 @@ Any whitespace in the message will be shifted, and will likely be encoded as a d
 
 The key and date generated to encode the string will only be printed to the terminal once, upon completion of an encryption. In order to decrypt the message, the key and date must be given as an argument to the decrypt command. Loss of the key will render one unable to decrypt using this algorithim. However, the date key is generated from the date of encryption, and can be easily worked out if the encryption date is known.
 
-#### Additional Resources + Context
-While not relavant to the algorithim specifically, here are some interesting facts and resources relating to the cracking of Enigma.
+#### **Additional Resources + Context**
+While not relavant to this algorithim specifically, here are some interesting facts, content, and resources relating to the cracking of Enigma.
 
-![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)
-Enigma Machine [Source](https://www.timesofisrael.com/enigma-code-machine-reveals-hebrew-secret/)
+![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)</br>
+Enigma Machine [(Source)](https://www.timesofisrael.com/enigma-code-machine-reveals-hebrew-secret/)
 
-![Enigma_wiring](https://user-images.githubusercontent.com/79817178/149668364-80fc786a-7009-4dc3-b171-08fb32b11c52.png)
-[Enigma Machine](https://en.wikipedia.org/wiki/Enigma_machine) from Wikipedia</br></br>
-
-[Alan Turing and Enigma](https://www.youtube.com/watch?v=d2NWPG2gB_A) from Computerphile on YouTube, part of a [longer series on the work of Turing](https://www.youtube.com/playlist?list=PLzH6n4zXuckodsatCTEuxaygCHizMS0_I)</br></br>
+![Enigma_wiring](https://user-images.githubusercontent.com/79817178/149668364-80fc786a-7009-4dc3-b171-08fb32b11c52.png)</br>
+Enigma Machine Wiring + Article from [Wikipedia](https://en.wikipedia.org/wiki/Enigma_machine)
 
 [Ultra](https://en.wikipedia.org/wiki/Ultra): Codename for WWII British cryptography division located at Bletchley Park
+
+[Alan Turing and Enigma](https://www.youtube.com/watch?v=d2NWPG2gB_A) from Computerphile on YouTube, part of a [longer series on the work of Turing](https://www.youtube.com/playlist?list=PLzH6n4zXuckodsatCTEuxaygCHizMS0_I)</br>
 
 **CAPTCHA** stands for “**C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part,”
 
 Cryptography comes from the ancient Greek words **kryptós**, meaning “hidden,” and **graphein**, meaning “to study.”
+
+#### **A Brief Historical Anecdote**
 
 The ideas underpinning enigma machine were originally patented in 1918, and the finished product was released to market in 1923, under the brand name Enigma. Initally developed for commercial purposes, and was later adopted by the German military prior to WWII.
 
@@ -102,4 +103,8 @@ Alan Turing died a tragic and premature death in 1954, at the age of 41. He was 
 
 He is a very visible example of the countless individuals who, to this day, are persecuted based on their identity, regardless of the content of their character, or their contributions to the lives of others, and humanity at large.
 
-Had it not been for his contributions to military and industry, he would have likely remained unknown and anonymous, and would not serve as an example of a disturbing history of human rights that must be acknowledged and reckoned with.
+Had it not been for his contributions to military and industry, Alan Turing would likely have remained unknown and anonymous. The legacy of his work helped form the foundation of computing and the modern world, but his story serves as a stark reminder of a disturbing history of human rights that must be acknowledged and reckoned with.
+
+---
+[jake_edel](https://github.com/jake-edel) on GitHub</br>
+<a href = "mailto: jakobedelstein@gmail.com">jakobedelstein@gmail.com</a>
