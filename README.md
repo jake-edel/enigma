@@ -120,8 +120,7 @@ While not relavant to this algorithim specifically, here are some interesting fa
 ![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)</br>
 Enigma Machine [(Source)](https://www.timesofisrael.com/enigma-code-machine-reveals-hebrew-secret/)
 
-![Enigma_wiring](https://user-images.githubusercontent.com/79817178/149668364-80fc786a-7009-4dc3-b171-08fb32b11c52.png)</br>
-Enigma Machine Wiring + Article from [Wikipedia](https://en.wikipedia.org/wiki/Enigma_machine)
+[Wikipedia](https://en.wikipedia.org/wiki/Enigma_machine)
 
 [Ultra](https://en.wikipedia.org/wiki/Ultra): Codename for WWII British cryptography division located at Bletchley Park
 
