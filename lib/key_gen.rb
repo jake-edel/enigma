@@ -8,4 +8,8 @@ module KeyGen
   def self.generate_date
     Time.now.strftime("%d%m%y")
   end
+
+  def self.char_set
+    (("a".."z").to_a << ' ')
+  end
 end

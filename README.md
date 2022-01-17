@@ -7,7 +7,21 @@
 
 ---
 
-#### Introduction
+
+#### Table of Contents
+- [Introduction](#introduction)
+- [Under The Hood](#underthehood)
+- [Calculating Shifts](#shifts)
+- [Encoding The String](#encrypt)
+- [Decoding The String](#decrypt)
+- [Considerations](#considerations)
+- [Self Assessment](#assessment)
+- [Additional Resources + Context](#context)
+
+<a name="introduction"/>
+Introduction
+</a>
+
 
 The top level of Enigma consists of two files, `encrypt.rb` and `decrypt.rb`. To begin, create a .txt file inside the`msgs/` containing you message to be encrypted.
 
@@ -19,7 +33,9 @@ For Example:  `ruby lib/encrypt.rb msg.txt crypto.txt` This will read the text i
 
 Both encrypt an decrypt will output the key and the date used for encryption. It is important to note the encrypt these keys in order to decrypt the message.
 
-#### Under the Hood
+<a name="under the hood"/>
+Under the Hood
+</a>
 
 The encryption algorigthim is based around three variables.
 - An arbitrary length string to be encoded
@@ -79,6 +95,17 @@ Any symbols or characters outside of the given set will not be shifted, and will
 Any whitespace in the message will be shifted, and will likely be encoded as a different character. Similarly, any character can be shifted to a whitespace.
 
 The key and date generated to encode the string will only be printed to the terminal once, upon completion of an encryption. In order to decrypt the message, the key and date must be given as an argument to the decrypt command. Loss of the key will render one unable to decrypt using this algorithim. However, the date key is generated from the date of encryption, and can be easily worked out if the encryption date is known.
+
+#### **Self Assessment**
+Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric), my assessment of my progress is as follows:
+
+**Functionality**: At this moment, I currently meet, not exceed expectations for the project. The CLI and encrypt/decrypt function work as expected, but I have not yet sucessfully implemented cracking functionality. I hope to submit the project with this fucntionality in place. As an aside, the cracking algorithm is one of the most interesting challenges I've ever attempted to code, and has solving it has become a multi-day obession for me. If you have a solution, or just want to talk through the ins and outs of the problem, please reach out.
+
+**OOP**: If introducing a module qualifies as above expectations, then I believe my project fits that criteria. The functionality for generating keys/ dates is tucked away in a generator class, and is called by multiple other classes in different contexts. Aside from the KeyGen module, all my others classes do their best to adhere to the principle of single responsibility. class Interface deals strictly with the CLI and file I/O, the calculation of shifts is contained entirely within OffsetFinder and the actual shifting of characters is handled by CharacterShifter. These classes call eachother and pass strictly necessary data back and forth, but have very little knowledge of each others functionality.
+
+**Ruby Conventions and Mechanics**: I rely heavily on a linter (Rubocop) to report errors/breaks from convention in my syntax and code structure. Assuming the rules of Rubocop are in line with the cannonical Ruby style guide, I would hope that my code very closely adheres to Ruby convention. I've made every attempt to encapsulate complex or terse logic inside of methods with semantically meaningful names, with the goal of allowing my higher level logic to read like an English sentance. Whenever possible, I tried to use the enumerable which would allow for the cleanest code, and have tried to avoid the overuse of accumulators and local variables, in favor of efficient enumerators and descriptive methods. While I have very little experience reading professional Ruby code, I believe that adherence to these guidelines places the project above expectations.
+
+**TDD**: Throughout the project, I have followed the following pattern for development as closely as possible: Outline basic class / test structure, identify the functionality that I require, writing tests to expect this functionality, writing empty methods to avoid a no method error, identifying the arguments reqired by the method, and then opening the method in Pry to begin manipulating the variable in scope. Once I found a working solution, I would paste the code into the method and ensure that the method meets expectation, and that the test fails when the expectation/method is incorrect. Currently sitting at 98% coverage due to continued development on the cracking feature, I plan to hit 100% before submission. Assuming that mocks + stubs are no longer part of the criteria, I would hope that this qualifies my project as above expectations.
 
 #### **Additional Resources + Context**
 While not relavant to this algorithim specifically, here are some interesting facts, content, and resources relating to the cracking of Enigma.
