@@ -12,11 +12,18 @@ class CodeCracker
 
     # In this example, the ' ' is the 4th shift, 'e' is the 1st shift, 'n' is the second shift, 'd' is the third shift. The last four characters of the encrypted message are hssi. So hssi shifted by shifts at index [3, 0, 1, 2] = ' end'. We need to find the sequence of shifts such that 'ssih' with be shifted to 'd en' The difference between each char per index should be a working set of shift values.
 
-    # shift_index 2:  d(char_index 3)   shifts to    i(char_index 8) diff 5
+    # Encryption
     # shift_index 3:  ' '(char_index 26) shifts to  h(char_index 7) diff 8
     # shift_index 0:  e(char_index 4)   shifts to  s(char_index 18) diff 14
     # shift_index 1:  n(char_index 13) shifts to  s(char_index 18) diff 5
+    # shift_index 2:  d(char_index 3)   shifts to    i(char_index 8) diff 5
 
+    # Decryption
+    # shift_index 3:  h(char_index 7) shifts to    ' '(char_index 26) diff 19
+    # shift_index 0:  s(char_index 18)   shifts to  e(char_index 4) diff 13
+    # shift_index 1:  s(char_index 18) shifts to  n(char_index 13) diff 22
+    # shift_index 2:  i(char_index 8)   shifts to   d(char_index 3) diff 22
+    
     # Does [14, 5, 5, 8] encode 'hello world end' to 'vjqtbeaweqihssi'?
     # Oh hell yeah it does
 
@@ -24,9 +31,9 @@ class CodeCracker
 
     # Once we've found the shift_pattern, we map each char of ' end' to the pattern to the encrypted signature in a key/value pair.
 
-    hash_map = pattern_map(unencrypted_signature, encrypted_signature, shift_index_pattern)
+    char_array = pattern_map(unencrypted_signature, encrypted_signature, shift_index_pattern)
     # Given a hash of unencrypted chars mapped to encrypted chars, we need a method to calculate the number of shifts required to move from unencrypted to encrypted. Returns the shifts out of order
-    unsorted_shifts = calculate_shifts(hash_map)
+    unsorted_shifts = calculate_shifts(char_array)
 
     # Need to place shifts back in order
     shifts = rotate_shifts(unsorted_shifts, shift_index_pattern)
@@ -39,29 +46,23 @@ class CodeCracker
     pt_array = plaintext.split('')
     crypt_array = encrypted.split('')
     char_array = []
+    # require 'pry-byebug'; binding.pry
     pattern.each do |index|
       char_array << [pt_array[index], crypt_array[index]]
     end
-    require 'pry-byebug'; binding.pry
     char_array
   end
 
     # How to handle shifts that rotate around to the front of the char set ie. value from line 51 returns negative
-  def self.calculate_shifts(hash_map)
-    # hash_map.each do |pt_char, crypt_char|
-    #   puts "PT Index:#{@char_set.index(pt_char)} => Encrypted Index:#{@char_set.index(crypt_char)}"
-    #   puts shift = @char_set.index(crypt_char) - @char_set.index(pt_char)
-    #
-    # end
+  def self.calculate_shifts(char_array)
     unordered_shifts = []
-    hash_map.each do |pair|
+    char_array.each do |pair|
       unordered_shifts << count_shifts(pair.last, pair.first)
     end
     unordered_shifts
   end
 
   def self.count_shifts(crypt_char, pt_char)
-    # require 'pry-byebug'; binding.pry
     rotated_char_set = @char_set.rotate(@char_set.index(pt_char))
     count = 0
     until rotated_char_set.first == crypt_char
@@ -74,7 +75,6 @@ class CodeCracker
   def self.rotate_shifts(shifts, pattern)
     shifts.rotate(pattern.index(0))
   end
-
 
     # How to find the combination of 5 digit key and 6 digit date that resolves to [14, 5, 5, 8]?
 
@@ -134,3 +134,5 @@ class CodeCracker
     shift_pattern
   end
 end
+
+# Well I can't say I didn't try...
