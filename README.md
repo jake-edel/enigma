@@ -97,7 +97,7 @@ Decoding works on the same priciples and methods as the encoding, with one diffe
 
 <a name="considerations"/>
 Considerations
-</a>
+</a></br>
 The algorithim will not preserve character case, and thus the decrypted message will not reflect the character case of the original message.
 
 Any symbols or characters outside of the given set will not be shifted, and will have their index and value preserved in the encoded message.
