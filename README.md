@@ -109,6 +109,7 @@ The key and date generated to encode the string will only be printed to the term
 <a name="assessment"/>
 Self Assessment
 </a>
+</br>
 Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric), my assessment of my progress is as follows:
 
 **Functionality**: At this moment, I currently meet, not exceed expectations for the project. The CLI and encrypt/decrypt function work as expected, but I have not yet sucessfully implemented cracking functionality. I hope to submit the project with this fucntionality in place. As an aside, the cracking algorithm is one of the most interesting challenges I've ever attempted to code, and has solving it has become a multi-day obession for me. If you have a solution, or just want to talk through the ins and outs of the problem, please reach out.
@@ -122,6 +123,7 @@ Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubri
 <a name="context"/>
 Additional Resources + Context
 </a>
+</br>
 While not relavant to this algorithim specifically, here are some interesting facts, content, and resources relating to the cracking of Enigma.
 
 ![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)</br>
@@ -142,6 +144,7 @@ Cryptography comes from the ancient Greek words **kryptós**, meaning “hidden,
 <a name="storytime"/>
 A Breif Anecdote
 </a>
+</br>
 
 The ideas underpinning enigma machine were originally patented in Germany in 1918, and the finished product was released to market in 1923, under the brand name Enigma. Initally developed for commercial purposes, and was later adopted by the German military prior to WWII.
 
