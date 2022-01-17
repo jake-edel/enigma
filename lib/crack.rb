@@ -2,48 +2,48 @@ require './lib/key_gen'
 
 class CodeCracker
   def self.crack(message, date = KeyGen.generate_date)
-    unencrypted_signature = ' end'
-    encrypted_signature = message[-4..-1]
-    signature_by_shift = 'd en'
-    encrypted_by_shift = 'ssih'
+    unencrypted_signature = ' end' # Last 4 chars must always translate to this
+    encrypted_signature = message[-4..-1] # Last 4 chars of encrypted message
+    # unencrypted_signature <= encrypt/decrypt => encrypted_signature
+
     @char_set = KeyGen.char_set
 
     # Assumption: message will follow the same 1,2,3,4 shift pattern, find where in the pattern the ' end' signature is located. #locate_shifts will take message, and return the 'shift_index_pattern' mapped to ' end'
 
     # In this example, the ' ' is the 4th shift, 'e' is the 1st shift, 'n' is the second shift, 'd' is the third shift. The last four characters of the encrypted message are hssi. So hssi shifted by shifts at index [3, 0, 1, 2] = ' end'. We need to find the sequence of shifts such that 'ssih' with be shifted to 'd en' The difference between each char per index should be a working set of shift values.
 
-    # shift_index 0:  e(char_index 4)   shifts to    s(char_index 18) diff 14
-    # shift_index 1:  n(char_index 13) shifts to  s(char_index 18) diff 5
     # shift_index 2:  d(char_index 3)   shifts to    i(char_index 8) diff 5
     # shift_index 3:  ' '(char_index 26) shifts to  h(char_index 7) diff 8
+    # shift_index 0:  e(char_index 4)   shifts to  s(char_index 18) diff 14
+    # shift_index 1:  n(char_index 13) shifts to  s(char_index 18) diff 5
 
     # Does [14, 5, 5, 8] encode 'hello world end' to 'vjqtbeaweqihssi'?
     # Oh hell yeah it does
 
     shift_index_pattern = locate_shifts(message)
 
-
     # Once we've found the shift_pattern, we map each char of ' end' to the pattern to the encrypted signature in a key/value pair.
 
     hash_map = pattern_map(unencrypted_signature, encrypted_signature, shift_index_pattern)
-
     # Given a hash of unencrypted chars mapped to encrypted chars, we need a method to calculate the number of shifts required to move from unencrypted to encrypted. Returns the shifts out of order
     unsorted_shifts = calculate_shifts(hash_map)
 
     # Need to place shifts back in order
     shifts = rotate_shifts(unsorted_shifts, shift_index_pattern)
-    require 'pry-byebug'; binding.pry
+    # require 'pry-byebug'; binding.pry
   end
 
   # method to map and shuffle ' end' signature to the index pattern, regardless of pattern order.
+  # Need to drop hash and use array of pairs, Hash will not allow for duplicate key values
   def self.pattern_map(plaintext, encrypted, pattern)
     pt_array = plaintext.split('')
     crypt_array = encrypted.split('')
-    hash_map = {}
+    char_array = []
     pattern.each do |index|
-      hash_map[pt_array[index]] = crypt_array[index]
+      char_array << [pt_array[index], crypt_array[index]]
     end
-    hash_map
+    require 'pry-byebug'; binding.pry
+    char_array
   end
 
     # How to handle shifts that rotate around to the front of the char set ie. value from line 51 returns negative
@@ -61,6 +61,7 @@ class CodeCracker
   end
 
   def self.count_shifts(crypt_char, pt_char)
+    # require 'pry-byebug'; binding.pry
     rotated_char_set = @char_set.rotate(@char_set.index(pt_char))
     count = 0
     until rotated_char_set.first == crypt_char
@@ -128,7 +129,7 @@ class CodeCracker
       next unless index > (message.size - 5)
 
       shift_pattern << index % 4
-      puts "#{char}: #{index} ==> #{index % 4}"
+      # print "\n#{char}: #{index} ==> #{index % 4}\n"
     end
     shift_pattern
   end
