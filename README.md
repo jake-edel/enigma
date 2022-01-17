@@ -1,12 +1,6 @@
-
-# <p align="center">🕵 💬 🔐 E N I G M A 🤫 📅 🤐</p>
-![enigma_illustration_scaled](https://user-images.githubusercontent.com/79817178/149670136-1278284f-66e8-4e68-8608-a25d8f621d2c.jpg)
-### <p align="center">**A command line introduction to cryptography**</p>
-
-
-
+# <p style="text-align: center;">🕵 💬 🔐  E N I G M A 🤫 📅 🤐</p>
+### <p style="text-align: center;">**A command line introduction to cryptography**</p>
 ---
-
 
 #### Table of Contents
 - [Introduction](#introduction)
@@ -22,8 +16,6 @@
 <a name="introduction"/>
 Introduction
 </a>
-
-
 The top level of Enigma consists of two files, `encrypt.rb` and `decrypt.rb`. To begin, create a .txt file inside the`msgs/` containing you message to be encrypted.
 
 To encrypt the file, call the command `ruby lib/encrypt.rb <file_name> <output_file>`</br>
@@ -34,7 +26,7 @@ For Example:  `ruby lib/encrypt.rb msg.txt crypto.txt` This will read the text i
 
 Both encrypt an decrypt will output the key and the date used for encryption. It is important to note the encrypt these keys in order to decrypt the message.
 
-<a name="underthehood"/>
+<a name="under the hood"/>
 Under the Hood
 </a>
 
@@ -72,6 +64,7 @@ And the resulting shifts collection is `[16, 31, 42, 49]`
 <a name="encrypt"/>
 Encoding The String
 </a>
+
 Using the collection of shift values, each character is encoded with a corresponding shift value. Starting with the first character and the first shift value, the character is shifted through the set of shiftable characters. The character is moved forward through the collection, the length determined by the value. Shifts the extend beyond the length of the collection, the character is wrapped around starting at `a`.
 
 The second character will be shifted by the second shift value, the third by the third value, and so on. Once four characters have been shifted, the shift sequence repeats from the beginning. Any character not shifted will not advance the procession of shifts.
@@ -97,7 +90,7 @@ Decoding works on the same priciples and methods as the encoding, with one diffe
 
 <a name="considerations"/>
 Considerations
-</a></br>
+</a>
 The algorithim will not preserve character case, and thus the decrypted message will not reflect the character case of the original message.
 
 Any symbols or characters outside of the given set will not be shifted, and will have their index and value preserved in the encoded message.
@@ -109,8 +102,7 @@ The key and date generated to encode the string will only be printed to the term
 <a name="assessment"/>
 Self Assessment
 </a>
-</br>
-Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric), my assessment of my progress is as follows:</br></br>
+Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric), my assessment of my progress is as follows:
 
 **Functionality**: At this moment, I currently meet, not exceed expectations for the project. The CLI and encrypt/decrypt function work as expected, but I have not yet sucessfully implemented cracking functionality. I hope to submit the project with this fucntionality in place. As an aside, the cracking algorithm is one of the most interesting challenges I've ever attempted to code, and has solving it has become a multi-day obession for me. If you have a solution, or just want to talk through the ins and outs of the problem, please reach out.
 
@@ -123,12 +115,10 @@ Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubri
 <a name="context"/>
 Additional Resources + Context
 </a>
-</br>
 While not relavant to this algorithim specifically, here are some interesting facts, content, and resources relating to the cracking of Enigma.
 
 ![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)</br>
 Enigma Machine [(Source)](https://www.timesofisrael.com/enigma-code-machine-reveals-hebrew-secret/)
-[Cover Illustration Source](https://hackaday.com/2017/08/22/the-enigma-enigma-how-the-enigma-machine-worked/)
 
 ![Enigma_wiring](https://user-images.githubusercontent.com/79817178/149668364-80fc786a-7009-4dc3-b171-08fb32b11c52.png)</br>
 Enigma Machine Wiring + Article from [Wikipedia](https://en.wikipedia.org/wiki/Enigma_machine)
@@ -144,7 +134,6 @@ Cryptography comes from the ancient Greek words **kryptós**, meaning “hidden,
 <a name="storytime"/>
 A Breif Anecdote
 </a>
-</br>
 
 The ideas underpinning enigma machine were originally patented in Germany in 1918, and the finished product was released to market in 1923, under the brand name Enigma. Initally developed for commercial purposes, and was later adopted by the German military prior to WWII.
 
