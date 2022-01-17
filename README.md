@@ -34,7 +34,7 @@ For Example:  `ruby lib/encrypt.rb msg.txt crypto.txt` This will read the text i
 
 Both encrypt an decrypt will output the key and the date used for encryption. It is important to note the encrypt these keys in order to decrypt the message.
 
-<a name="under the hood"/>
+<a name="underthehood"/>
 Under the Hood
 </a>
 
