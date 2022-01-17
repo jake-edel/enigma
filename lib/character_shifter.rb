@@ -1,8 +1,10 @@
+require './lib/key_gen'
+
 class CharacterShifter
   def initialize(message, offsets)
     @message = message
     @offsets = offsets
-    @char_set = (("a".."z").to_a << ' ')
+    @char_set = KeyGen.char_set
   end
 
     def shift_message(decrypt = false)
