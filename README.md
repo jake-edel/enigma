@@ -136,7 +136,7 @@ Cryptography comes from the ancient Greek words **kryptós**, meaning “hidden,
 </a></br></br>
 The ideas underpinning enigma machine were originally patented in Germany in 1918, and the finished product was released to market in 1923, under the brand name Enigma. Initally developed for commercial purposes, and was later adopted by the German military prior to WWII.
 
-A UK based team of mathmaticians and cryptographers, including Alan Turing, have been widely credited with cracking the Enigma encryption, as dramatized in the 2014 film, *'The Imitation Game'*. However, the foundation of their work was based on the earlier work of a team of  Polish mathmetician-cryptologists, who had broken more primative German ciphers as early as 1933.
+A UK based team of mathmaticians and cryptographers, including Alan Turing, have been widely credited with cracking the Enigma encryption, as dramatized in the 2014 film, *'The Imitation Game'*. However, the foundation of their work was based on the earlier work of a team of  Polish mathmetician-cryptologists, who had broken more primative German ciphers as early as 1933.</br>
 
 Aside from his work at Bletchley Park, which is recognized as having given the Allies a critical strategic advantage during WWII, Alan Turing's work has formed part of the foundation upon which all of Computer Science is built upon. However, cracking of Enigma was classified until 1974, and he was never able to recieve credit for his contribtion to the Allies eventual victory.
 
