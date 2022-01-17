@@ -3,17 +3,18 @@
 ---
 
 #### Table of Contents
-[Introduction](#introduction)
-[Under The Hood](#underthehood)
-[Calculating Shifts](#shifts)
-[Encoding The String](#encrypt)
-[Decoding The String](#decrypt)
-[Considerations](#considerations)
-[Self Assessment](#assessment)
-[Additional Resources + Context](#context)
+- [Introduction](#introduction)
+- [Under The Hood](#underthehood)
+- [Calculating Shifts](#shifts)
+- [Encoding The String](#encrypt)
+- [Decoding The String](#decrypt)
+- [Considerations](#considerations)
+- [Self Assessment](#assessment)
+- [Additional Resources + Context](#context)
 
 <a name="introduction"/>
-#### Introduction
+Introduction
+</a>
 
 The top level of Enigma consists of two files, `encrypt.rb` and `decrypt.rb`. To begin, create a .txt file inside the`msgs/` containing you message to be encrypted.
 
@@ -26,7 +27,8 @@ For Example:  `ruby lib/encrypt.rb msg.txt crypto.txt` This will read the text i
 Both encrypt an decrypt will output the key and the date used for encryption. It is important to note the encrypt these keys in order to decrypt the message.
 
 <a name="under the hood"/>
-#### Under the Hood
+Under the Hood
+</a>
 
 The encryption algorigthim is based around three variables.
 - An arbitrary length string to be encoded
