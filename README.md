@@ -42,9 +42,8 @@ The first step is to generate 4 "shift" values. Each value determines how far a 
 The "set" of characters used for shifting are the letters `a`to `z`, plus a single whitespace `' '` character. Characters in the string will be shifted according to this pattern. Any characters are not included in this set are not shifted and preserved in the encoded message.
 
 <a name="shifts"/>
-Calculating Shifts
-</a>
-
+<b>Calculating Shifts</b>
+</a></br></br>
 The four shift values are calculated based on the `key` and `date` variables. Each variable is used to generate a collection of four integers. The two collections' respective indecies are summed, resulting in four integers which become our "shifts"
 
 The 5 digit key is split into four collections of two digit consecutive values. These digits are joined together into an integer to give us our first half of the shift calculation.
@@ -62,8 +61,8 @@ Once both collections have been calculated, they are summed together, while pres
 And the resulting shifts collection is `[16, 31, 42, 49]`
 
 <a name="encrypt"/>
-Encoding The String
-</a>
+<b>Encoding The String</b>
+</a></br></br>
 
 Using the collection of shift values, each character is encoded with a corresponding shift value. Starting with the first character and the first shift value, the character is shifted through the set of shiftable characters. The character is moved forward through the collection, the length determined by the value. Shifts the extend beyond the length of the collection, the character is wrapped around starting at `a`.
 
@@ -77,9 +76,8 @@ Ex. The string, `aaaaa`, and shift collection `[1, 2, 3, 4]`, will interact as f
 - The encoded string will be `bcdeb`
 
 <a name="decrypt"/>
-Decoding The String
-</a>
-
+<b>Decoding The String</b>
+</a></br></br>
 Decoding works on the same priciples and methods as the encoding, with one difference. Rather than advancing forward through the character set, it will reverse the letter shift. Using the encoded string and shifts from above, the string `bcdeb` will be decrypted back to `aaaaa`.
 - 1st Shift: `b` reverse shifted by 1 is `a`
 - 2st Shift: `c` reverse shifted by 2 is `a`
@@ -89,8 +87,8 @@ Decoding works on the same priciples and methods as the encoding, with one diffe
 - The encoded string will be `bcdeb`
 
 <a name="considerations"/>
-Considerations
-</a>
+<b>Considerations</b>
+</a></br></br>
 The algorithim will not preserve character case, and thus the decrypted message will not reflect the character case of the original message.
 
 Any symbols or characters outside of the given set will not be shifted, and will have their index and value preserved in the encoded message.
@@ -100,8 +98,8 @@ Any whitespace in the message will be shifted, and will likely be encoded as a d
 The key and date generated to encode the string will only be printed to the terminal once, upon completion of an encryption. In order to decrypt the message, the key and date must be given as an argument to the decrypt command. Loss of the key will render one unable to decrypt using this algorithim. However, the date key is generated from the date of encryption, and can be easily worked out if the encryption date is known.
 
 <a name="assessment"/>
-Self Assessment
-</a>
+<b>Self Assessment</b>
+</a></br></br>
 Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric), my assessment of my progress is as follows:
 
 **Functionality**: At this moment, I currently meet, not exceed expectations for the project. The CLI and encrypt/decrypt function work as expected, but I have not yet sucessfully implemented cracking functionality. I hope to submit the project with this fucntionality in place. As an aside, the cracking algorithm is one of the most interesting challenges I've ever attempted to code, and has solving it has become a multi-day obession for me. If you have a solution, or just want to talk through the ins and outs of the problem, please reach out.
@@ -113,8 +111,8 @@ Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubri
 **TDD**: Throughout the project, I have followed the following pattern for development as closely as possible: Outline basic class / test structure, identify the functionality that I require, writing tests to expect this functionality, writing empty methods to avoid a no method error, identifying the arguments reqired by the method, and then opening the method in Pry to begin manipulating the variable in scope. Once I found a working solution, I would paste the code into the method and ensure that the method meets expectation, and that the test fails when the expectation/method is incorrect. Currently sitting at 98% coverage due to continued development on the cracking feature, I plan to hit 100% before submission. Assuming that mocks + stubs are no longer part of the criteria, I would hope that this qualifies my project as above expectations.
 
 <a name="context"/>
-Additional Resources + Context
-</a>
+<b>Additional Resources + Context</b>
+</a></br></br>
 While not relavant to this algorithim specifically, here are some interesting facts, content, and resources relating to the cracking of Enigma.
 
 ![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)</br>
@@ -132,9 +130,8 @@ Enigma Machine Wiring + Article from [Wikipedia](https://en.wikipedia.org/wiki/E
 Cryptography comes from the ancient Greek words **kryptós**, meaning “hidden,” and **graphein**, meaning “to study.”
 
 <a name="storytime"/>
-A Breif Anecdote
-</a>
-
+<b>A Breif Anecdote</b>
+</a></br></br>
 The ideas underpinning enigma machine were originally patented in Germany in 1918, and the finished product was released to market in 1923, under the brand name Enigma. Initally developed for commercial purposes, and was later adopted by the German military prior to WWII.
 
 A UK based team of mathmaticians and cryptographers, including Alan Turing, have been widely credited with cracking the Enigma encryption, as dramatized in the 2014 film, *'The Imitation Game'*. However, the foundation of their work was based on the earlier work of a team of  Polish mathmetician-cryptologists, who had broken more primative German ciphers as early as 1933.
