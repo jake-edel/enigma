@@ -1,6 +1,12 @@
-# <p style="text-align: center;">🕵 💬 🔐  E N I G M A 🤫 📅 🤐</p>
-### <p style="text-align: center;">**A command line introduction to cryptography**</p>
+
+# <p align="center">🕵 💬 🔐 E N I G M A 🤫 📅 🤐</p>
+![enigma_illustration_scaled](https://user-images.githubusercontent.com/79817178/149670136-1278284f-66e8-4e68-8608-a25d8f621d2c.jpg)
+### <p align="center">**A command line introduction to cryptography**</p>
+
+
+
 ---
+
 
 #### Table of Contents
 - [Introduction](#introduction)
@@ -15,6 +21,7 @@
 <a name="introduction"/>
 Introduction
 </a>
+
 
 The top level of Enigma consists of two files, `encrypt.rb` and `decrypt.rb`. To begin, create a .txt file inside the`msgs/` containing you message to be encrypted.
 
@@ -105,6 +112,7 @@ While not relavant to this algorithim specifically, here are some interesting fa
 
 ![enigma](https://user-images.githubusercontent.com/79817178/149668328-a58a9b0c-8307-47ec-88f3-74e1cd4d4847.jpg)</br>
 Enigma Machine [(Source)](https://www.timesofisrael.com/enigma-code-machine-reveals-hebrew-secret/)
+[Cover Illustration Source](https://hackaday.com/2017/08/22/the-enigma-enigma-how-the-enigma-machine-worked/)
 
 ![Enigma_wiring](https://user-images.githubusercontent.com/79817178/149668364-80fc786a-7009-4dc3-b171-08fb32b11c52.png)</br>
 Enigma Machine Wiring + Article from [Wikipedia](https://en.wikipedia.org/wiki/Enigma_machine)
