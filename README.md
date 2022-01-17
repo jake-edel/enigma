@@ -111,7 +111,7 @@ Self Assessment
 </a>
 </br>
 </br>
-Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric), my assessment of my progress is as follows:
+Based off [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric), my assessment of my progress is as follows:</br>
 
 **Functionality**: At this moment, I currently meet, not exceed expectations for the project. The CLI and encrypt/decrypt function work as expected, but I have not yet sucessfully implemented cracking functionality. I hope to submit the project with this fucntionality in place. As an aside, the cracking algorithm is one of the most interesting challenges I've ever attempted to code, and has solving it has become a multi-day obession for me. If you have a solution, or just want to talk through the ins and outs of the problem, please reach out.
 
