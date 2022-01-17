@@ -27,9 +27,12 @@ class CodeCracker
 
     hash_map = pattern_map(unencrypted_signature, encrypted_signature, shift_index_pattern)
 
-    # Given a hash of unencrypted chars mapped to encrypted chars, we need a method to calculate the number of shifts required to move from unencrypted to encrypted
-    calculate_shifts(hash_map)
+    # Given a hash of unencrypted chars mapped to encrypted chars, we need a method to calculate the number of shifts required to move from unencrypted to encrypted. Returns the shifts out of order
+    unsorted_shifts = calculate_shifts(hash_map)
 
+    # Need to place shifts back in order
+    shifts = rotate_shifts(unsorted_shifts, shift_index_pattern)
+    require 'pry-byebug'; binding.pry
   end
 
   # method to map and shuffle ' end' signature to the index pattern, regardless of pattern order.
@@ -45,16 +48,30 @@ class CodeCracker
 
     # How to handle shifts that rotate around to the front of the char set ie. value from line 51 returns negative
   def self.calculate_shifts(hash_map)
-    hash_map.each do |pt_char, crypt_char|
-      puts "PT Index:#{@char_set.index(pt_char)} => Encrypted Index:#{@char_set.index(crypt_char)}"
-      puts a = @char_set.index(crypt_char) - @char_set.index(pt_char)
-
-      count_shifts(crypt_char, pt_char) if a.negative?
+    # hash_map.each do |pt_char, crypt_char|
+    #   puts "PT Index:#{@char_set.index(pt_char)} => Encrypted Index:#{@char_set.index(crypt_char)}"
+    #   puts shift = @char_set.index(crypt_char) - @char_set.index(pt_char)
+    #
+    # end
+    unordered_shifts = []
+    hash_map.each do |pair|
+      unordered_shifts << count_shifts(pair.last, pair.first)
     end
+    unordered_shifts
   end
 
   def self.count_shifts(crypt_char, pt_char)
+    rotated_char_set = @char_set.rotate(@char_set.index(pt_char))
+    count = 0
+    until rotated_char_set.first == crypt_char
+      rotated_char_set.rotate!
+      count += 1
+    end
+    count
+  end
 
+  def self.rotate_shifts(shifts, pattern)
+    shifts.rotate(pattern.index(0))
   end
 
 
@@ -107,11 +124,11 @@ class CodeCracker
     # How to find the key using todays date?
   def self.locate_shifts(message)
     shift_pattern = []
-    message.split('').each_with_index do |_char, index|
+    message.split('').each_with_index do |char, index|
       next unless index > (message.size - 5)
 
       shift_pattern << index % 4
-      # puts "#{char}: #{index} ==> #{index % 4}"
+      puts "#{char}: #{index} ==> #{index % 4}"
     end
     shift_pattern
   end
