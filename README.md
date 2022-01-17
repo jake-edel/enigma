@@ -14,8 +14,8 @@
 - [A Brief Anecdote](#storytime)
 
 <a name="introduction"/>
-Introduction
-</a>
+<b>Introduction</b>
+</a></br>
 The top level of Enigma consists of two files, `encrypt.rb` and `decrypt.rb`. To begin, create a .txt file inside the`msgs/` containing you message to be encrypted.
 
 To encrypt the file, call the command `ruby lib/encrypt.rb <file_name> <output_file>`</br>
