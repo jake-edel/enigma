@@ -6,9 +6,9 @@ RSpec.describe Enigma do
     @cipher_text = 'keder ohulw'
     key = '02715'
     date = '040895'
-
-    @encrypted = Enigma.encrypt(@message, key, date)
-    @decrypted = Enigma.decrypt(@cipher_text, key, date)
+    enigma = Enigma.new
+    @encrypted = enigma.encrypt(@message, key, date)
+    @decrypted = enigma.decrypt(@cipher_text, key, date)
   end
 
   it 'takes a hash with a string, a key, and a date, encrypts message, and returns a hash with an encryped string, key, and date' do

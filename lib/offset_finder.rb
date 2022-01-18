@@ -4,6 +4,7 @@ module OffsetFinder
   end
 
   def self.find_consecutive_values(digit_string)
+    
     digit_string.chars.each_cons(2).map { |cons| cons.join('').to_i }
   end
 
