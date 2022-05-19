@@ -130,20 +130,6 @@ Enigma Machine [(Source)](https://www.timesofisrael.com/enigma-code-machine-reve
 
 Cryptography comes from the ancient Greek words **kryptós**, meaning “hidden,” and **graphein**, meaning “to study.”
 
-<a name="storytime"/>
-<b>A Breif Anecdote</b>
-</a></br></br>
-The ideas underpinning enigma machine were originally patented in Germany in 1918, and the finished product was released to market in 1923, under the brand name Enigma. Initally developed for commercial purposes, and was later adopted by the German military prior to WWII.</br></br>
-
-A UK based team of mathmaticians and cryptographers, including Alan Turing, have been widely credited with cracking the Enigma encryption, as dramatized in the 2014 film, *'The Imitation Game'*. However, the foundation of their work was based on the earlier work of a team of  Polish mathmetician-cryptologists, who had broken more primative German ciphers as early as 1933.</br>
-
-Aside from his work at Bletchley Park, which is recognized as having given the Allies a critical strategic advantage during WWII, Alan Turing's work has formed part of the foundation upon which all of Computer Science is built upon. However, cracking of Enigma was classified until 1974, and he was never able to recieve credit for his contribtion to the Allies eventual victory.
-
-Alan Turing died a tragic and premature death in 1954, at the age of 41. He was prosecuted for his sexuality, and recieved punishment so cruel, inhumane and barbaric, that it defies comprehension by modern standards. A public apology was issued in 2009, and a posthumous pardon was granted by Queen Elizabeth II in 2013, nearly 60 years after his death.
-
-Had it not been for his contributions to military and industry, Alan Turing would likely have remained unknown and anonymous. The legacy of his work helped form the foundation of computing and the modern world, but his story serves as a stark reminder of a disturbing history of human rights that must be acknowledged and reckoned with.
-
-He is a very visible example of the countless individuals who, to this day, are persecuted based on their identity, regardless of the content of their character, or their contributions to the lives of others, and humanity at large.
 
 ---
 [jake_edel](https://github.com/jake-edel) on GitHub</br>
